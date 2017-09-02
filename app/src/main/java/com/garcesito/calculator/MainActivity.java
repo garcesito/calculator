@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     private Button bDivide,bMultiply,bPLus,bMinus,bEqual;
     private TextView tPantalla;
     private float Res;
-    private int c=1,op=0;
+    private int c=0,op=0;
 
 
     @Override
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         bSeven.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(c==1)
+                if(c==1||c==0)
                 {
                     operando1=operando1+"7";
                     tPantalla.setText(operando1);
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
         bEight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(c==1)
+                if(c==1||c==0)
                 {
                     operando1=operando1+"8";
                     tPantalla.setText(operando1);
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
         bNine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(c==1)
+                if(c==1||c==0)
                 {
                     operando1=operando1+"9";
                     tPantalla.setText(operando1);
@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
         bFour.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(c==1)
+                if(c==1||c==0)
                 {
                     operando1=operando1+"4";
                     tPantalla.setText(operando1);
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
         bFive.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(c==1)
+                if(c==1||c==0)
                 {
                     operando1=operando1+"5";
                     tPantalla.setText(operando1);
@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
         bSix.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(c==1)
+                if(c==1||c==0)
                 {
                     operando1=operando1+"6";
                     tPantalla.setText(operando1);
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
         bOne.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(c==1)
+                if(c==1||c==0)
                 {
                     operando1=operando1+"1";
                     tPantalla.setText(operando1);
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         bTwo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(c==1)
+                if(c==1||c==0)
                 {
                     operando1=operando1+"2";
                     tPantalla.setText(operando1);
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
         bThree.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(c==1)
+                if(c==1||c==0)
                 {
                     operando1=operando1+"3";
                     tPantalla.setText(operando1);
@@ -173,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
         bZero.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(c==1)
+                if(c==1||c==0)
                 {
                     operando1=operando1+"0";
                     tPantalla.setText(operando1);
@@ -187,7 +187,7 @@ public class MainActivity extends AppCompatActivity {
         bDot.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(c==1)
+                if(c==1||c==0)
                 {
                     operando1=operando1+".";
                     tPantalla.setText(operando1);
@@ -211,10 +211,26 @@ public class MainActivity extends AppCompatActivity {
         bMinus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                c=2;
-                op=2;
-                operador=operador+"-";
-                tPantalla.setText(operando1+operador);
+                if(c==2)
+                {
+                    operando2=operando2+"-";
+                    tPantalla.setText(operando1+operador+operando2);
+                }
+                if(c==1)
+                {
+                    c=2;
+                    op=2;
+                    operador=operador+"-";
+                    tPantalla.setText(operando1+operador);
+                }
+                if(c==0)
+                {
+                    operando1=operando1+"-";
+                    tPantalla.setText(operando1);
+                    c=1;
+                }
+
+
             }
         });
         bMultiply.setOnClickListener(new View.OnClickListener() {
@@ -238,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
         bEqual.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                c=1;
+                c=0;
 
                 /*esto deberia ir en una varias funciones*/
 
@@ -249,30 +265,31 @@ public class MainActivity extends AppCompatActivity {
                     float op2= Float.parseFloat(operando2);
                     Res= op1 +op2;
                 }
-                if(op==2)
+                else if(op==2)
                 {
                     float op1= Float.parseFloat(operando1);
                     float op2= Float.parseFloat(operando2);
                     Res= op1 -op2;
                 }
-                if(op==3)
+                else if(op==3)
                 {
                     float op1= Float.parseFloat(operando1);
                     float op2= Float.parseFloat(operando2);
                     Res= op1 *op2;
                 }
-                if(op==4)
+                else if(op==4)
                 {
                     float op1= Float.parseFloat(operando1);
                     float op2= Float.parseFloat(operando2);
                     Res= op1 /op2;
+                }else
+                {
+                    float op1=0;
+                    float op2=0;
+                    Res=op1+op2;
                 }
 
-                String a="-14.5";
-                String b="9.3";
-                float op1= Float.parseFloat(a);
-                float op2= Float.parseFloat(b);
-                Res= op1 /op2;
+
                     tPantalla.setText(operando1+operador+operando2+"= \n"+ Res);
 
 
