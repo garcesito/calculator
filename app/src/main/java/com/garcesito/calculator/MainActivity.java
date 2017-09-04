@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     operando1=operando1+"7";
                     tPantalla.setText(operando1);
+                    c=1;
                 }else
                 {
                     operando2=operando2+"7";
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     operando1=operando1+"8";
                     tPantalla.setText(operando1);
+                    c=1;
                 }else
                 {
                     operando2=operando2+"8";
@@ -79,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     operando1=operando1+"9";
                     tPantalla.setText(operando1);
+                    c=1;
                 }else
                 {
                     operando2=operando2+"9";
@@ -93,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     operando1=operando1+"4";
                     tPantalla.setText(operando1);
+                    c=1;
                 }else
                 {
                     operando2=operando2+"4";
@@ -107,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     operando1=operando1+"5";
                     tPantalla.setText(operando1);
+                    c=1;
                 }else
                 {
                     operando2=operando2+"5";
@@ -121,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     operando1=operando1+"6";
                     tPantalla.setText(operando1);
+                    c=1;
                 }else
                 {
                     operando2=operando2+"6";
@@ -135,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     operando1=operando1+"1";
                     tPantalla.setText(operando1);
+                    c=1;
                 }else
                 {
                     operando2=operando2+"1";
@@ -149,6 +156,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     operando1=operando1+"2";
                     tPantalla.setText(operando1);
+                    c=1;
                 }else
                 {
                     operando2=operando2+"2";
@@ -163,6 +171,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     operando1=operando1+"3";
                     tPantalla.setText(operando1);
+                    c=1;
                 }else
                 {
                     operando2=operando2+"3";
@@ -177,6 +186,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     operando1=operando1+"0";
                     tPantalla.setText(operando1);
+                    c=1;
                 }else
                 {
                     operando2=operando2+"0";
@@ -191,6 +201,7 @@ public class MainActivity extends AppCompatActivity {
                 {
                     operando1=operando1+".";
                     tPantalla.setText(operando1);
+                    c=1;
                 }else
                 {
                     operando2=operando2+".";
